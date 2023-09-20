@@ -9,6 +9,18 @@ import Foundation
 import UIKit
 
 class ProfileView: UIView {
+    let gallerySpiderMan: [String] = [
+        "SpiderManGallery1",
+        "SpiderManGallery2",
+        "SpiderManGallery3",
+        "SpiderManGallery4",
+        "SpiderManGallery5",
+        "SpiderManGallery6",
+        "SpiderManGallery7",
+        "SpiderManGallery8",
+        "SpiderManGallery9"
+    ]
+    
     // MARK: - Properties
     private let userNameLabel: UILabel = {
         let label = UILabel()
@@ -36,7 +48,7 @@ class ProfileView: UIView {
         let imageView = UIImageView(image: UIImage(named: "SpiderMan"))
         
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 50
+        imageView.layer.cornerRadius = 60
         imageView.clipsToBounds = true
         imageView.layer.borderWidth = 1
         imageView.layer.borderColor = UIColor.gray.cgColor
@@ -188,11 +200,15 @@ class ProfileView: UIView {
     private let followButton: UIButton = {
         let button = UIButton(type: .custom)
         
-        button.backgroundColor = .red
+        button.backgroundColor = .subColor2
+        // 테두리 스타일 설정
+        button.layer.borderWidth = 1.0 // 테두리 두께
+        button.layer.borderColor = UIColor.mainColor1?.cgColor // 테두리 색상
+        button.layer.cornerRadius = 6.0 // 테두리의 모서리 둥글게 처리 (원하는 값으로 설정)
         
         button.setTitle("Follow", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.mainColor1, for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -201,11 +217,15 @@ class ProfileView: UIView {
     private let messageButton: UIButton = {
         let button = UIButton(type: .custom)
         
-        button.backgroundColor = .red
+        button.backgroundColor = .subColor2
+        // 테두리 스타일 설정
+        button.layer.borderWidth = 1.0 // 테두리 두께
+        button.layer.borderColor = UIColor.mainColor1?.cgColor // 테두리 색상
+        button.layer.cornerRadius = 6.0 // 테두리의 모서리 둥글게 처리 (원하는 값으로 설정)
         
         button.setTitle("Message", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.mainColor1, for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -225,12 +245,17 @@ class ProfileView: UIView {
     private let underBarButton: UIButton = {
         let button = UIButton()
         
-        button.backgroundColor = .red
+        button.backgroundColor = .subColor2
+        // 테두리 스타일 설정
+        button.layer.borderWidth = 1.0 // 테두리 두께
+        button.layer.borderColor = UIColor.mainColor1?.cgColor // 테두리 색상
+        button.layer.cornerRadius = 6.0 // 테두리의 모서리 둥글게 처리 (원하는 값으로 설정)
+        
         button.widthAnchor.constraint(equalToConstant: 30).isActive = true
         button.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         button.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-        button.tintColor = .darkGray
+        button.tintColor = .mainColor1
         
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -253,7 +278,7 @@ class ProfileView: UIView {
     let galleryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .blue
+        collectionView.backgroundColor = .white
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -292,20 +317,20 @@ class ProfileView: UIView {
             listButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             
             profileImageView.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 14),
-            profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
-            profileImageView.widthAnchor.constraint(equalToConstant: 100),
-            profileImageView.heightAnchor.constraint(equalToConstant: 100),
+            profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            profileImageView.widthAnchor.constraint(equalToConstant: 120),
+            profileImageView.heightAnchor.constraint(equalToConstant: 120),
             
             numStackView.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor),
             numStackView.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10),
             numStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
             
             myInfoStackView.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 14),
-            myInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
+            myInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             
             middleBar2StackView.topAnchor.constraint(equalTo: myInfoStackView.bottomAnchor, constant: 14),
-            middleBar2StackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
-            middleBar2StackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
+            middleBar2StackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            middleBar2StackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
             galleryCollectionView.topAnchor.constraint(equalTo: middleBar2StackView.bottomAnchor, constant: 10),
             galleryCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -330,7 +355,7 @@ extension ProfileView: UICollectionViewDelegate {
 extension ProfileView: UICollectionViewDataSource {
     // collection view의 item 갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 300
+        return gallerySpiderMan.count
     }
     
     // Collection View의 cell 표시 방법
@@ -338,6 +363,7 @@ extension ProfileView: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.identifier, for: indexPath) as? GalleryCollectionViewCell else { return UICollectionViewCell()
         }
         cell.backgroundColor = .white
+        cell.configure(with: gallerySpiderMan[indexPath.row])
         return cell
     }
 }

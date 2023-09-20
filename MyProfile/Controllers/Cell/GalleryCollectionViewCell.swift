@@ -14,9 +14,12 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     private let imageViewSize: CGFloat = 100
     
     private let galleryImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(systemName: "person.circle.fill"))
+//        let imageView = UIImageView(image: UIImage(systemName: "person.circle.fill"))
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         
-        imageView.backgroundColor = .red
+        imageView.backgroundColor = .white
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -36,6 +39,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     private func setUI() {
         addSubview(galleryImageView)
+        galleryImageView.image = UIImage(systemName: "SpiderManGallery1")
     }
     
     private func setConstraint() {
@@ -45,5 +49,9 @@ class GalleryCollectionViewCell: UICollectionViewCell {
             galleryImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             galleryImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
+    }
+    
+    func configure(with image: String) {
+        galleryImageView.image = UIImage(named: image)
     }
 }

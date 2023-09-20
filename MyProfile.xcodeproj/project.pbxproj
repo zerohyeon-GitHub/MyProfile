@@ -17,6 +17,7 @@
 		EB6923B52AB939880027143D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923B42AB939880027143D /* ProfileViewController.swift */; };
 		EB6923B82AB948FF0027143D /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = EB6923B72AB948FF0027143D /* Readme.md */; };
 		EB6923BA2ABABAF40027143D /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923B92ABABAF40027143D /* GalleryCollectionViewCell.swift */; };
+		EB6923BD2ABB15F60027143D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923BC2ABB15F60027143D /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EB6923B42AB939880027143D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EB6923B72AB948FF0027143D /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		EB6923B92ABABAF40027143D /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB6923BC2ABB15F60027143D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		EB6923B02AB927090027143D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB6923BC2ABB15F60027143D /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,8 +107,8 @@
 		EB6923B32AB939640027143D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EB6923BB2ABB02110027143D /* Cell */,
 				EB6923B42AB939880027143D /* ProfileViewController.swift */,
-				EB6923B92ABABAF40027143D /* GalleryCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +120,14 @@
 				EB6923982AB9268F0027143D /* SceneDelegate.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EB6923BB2ABB02110027143D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB6923B92ABABAF40027143D /* GalleryCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				EB6923A12AB926900027143D /* MyProfile.xcdatamodeld in Sources */,
 				EB6923B22AB927160027143D /* ProfileView.swift in Sources */,
 				EB6923972AB9268F0027143D /* AppDelegate.swift in Sources */,
+				EB6923BD2ABB15F60027143D /* Color.swift in Sources */,
 				EB6923BA2ABABAF40027143D /* GalleryCollectionViewCell.swift in Sources */,
 				EB6923992AB9268F0027143D /* SceneDelegate.swift in Sources */,
 			);
