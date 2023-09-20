@@ -13,6 +13,7 @@ class ProfileView: UIView {
     private let userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "my Name"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -21,7 +22,10 @@ class ProfileView: UIView {
     private let listButton: UIButton = {
         let button = UIButton()
         
-        button.setImage(UIImage(systemName: "line.3.horizontal"), for: .normal)
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 25, weight: .light)
+        let image = UIImage(systemName: "line.3.horizontal", withConfiguration: imageConfig)
+        
+        button.setImage(image, for: .normal)
         button.tintColor = .darkGray
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -142,8 +146,107 @@ class ProfileView: UIView {
         return stackView
     }()
     
-    // MARK: - Initializers
+    private let myInfo1Label: UILabel = {
+        let label = UILabel()
+        label.text = "조영현"
+        label.font = UIFont.systemFont(ofSize: 14)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
+    private let myInfo2Label: UILabel = {
+        let label = UILabel()
+        label.text = "iOS Developer 🏋️"
+        label.font = UIFont.systemFont(ofSize: 14)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let myInfo3Label: UILabel = {
+        let label = UILabel()
+        label.text = "https://github.com/zerohyeon-GitHub"
+        label.font = UIFont.systemFont(ofSize: 14)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var myInfoStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [myInfo1Label, myInfo2Label, myInfo3Label])
+        stackView.spacing = 2
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
+    private let followButton: UIButton = {
+        let button = UIButton(type: .custom)
+        
+        button.backgroundColor = .red
+        
+        button.setTitle("Follow", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitleColor(.black, for: .normal)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let messageButton: UIButton = {
+        let button = UIButton(type: .custom)
+        
+        button.backgroundColor = .red
+        
+        button.setTitle("Message", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitleColor(.black, for: .normal)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private lazy var middleBar1StackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [followButton, messageButton])
+        stackView.spacing = 5
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    private let underBarButton: UIButton = {
+        let button = UIButton()
+        
+        button.backgroundColor = .red
+        button.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        button.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        button.tintColor = .darkGray
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private lazy var middleBar2StackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [middleBar1StackView, underBarButton])
+        stackView.spacing = 5
+        stackView.axis = .horizontal
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .fill
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -161,6 +264,8 @@ class ProfileView: UIView {
         addSubview(listButton)
         addSubview(profileImageView)
         addSubview(numStackView)
+        addSubview(myInfoStackView)
+        addSubview(middleBar2StackView)
         
         NSLayoutConstraint.activate([
             userNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
@@ -177,6 +282,13 @@ class ProfileView: UIView {
             numStackView.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor),
             numStackView.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 10),
             numStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
+            
+            myInfoStackView.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 14),
+            myInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
+            
+            middleBar2StackView.topAnchor.constraint(equalTo: myInfoStackView.bottomAnchor, constant: 14),
+            middleBar2StackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
+            middleBar2StackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
         ])
     }
 }
