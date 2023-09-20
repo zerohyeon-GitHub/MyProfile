@@ -183,7 +183,8 @@ class ProfileView: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-
+    
+    // MARK: Middle Bar
     private let followButton: UIButton = {
         let button = UIButton(type: .custom)
         
@@ -212,7 +213,7 @@ class ProfileView: UIView {
     
     private lazy var middleBar1StackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [followButton, messageButton])
-        stackView.spacing = 5
+        stackView.spacing = 8
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
@@ -237,7 +238,7 @@ class ProfileView: UIView {
     
     private lazy var middleBar2StackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [middleBar1StackView, underBarButton])
-        stackView.spacing = 5
+        stackView.spacing = 8
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
         stackView.alignment = .fill
@@ -246,19 +247,34 @@ class ProfileView: UIView {
         return stackView
     }()
     
+    // MARK: Nav gallery
+    
+    // MARK: Collection View
+    let galleryCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .blue
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        
+        configureCollectionView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
+        
+        configureCollectionView()
     }
     
     // MARK: - Helpers
-    
     private func setupView() {
         addSubview(userNameLabel)
         addSubview(listButton)
@@ -266,6 +282,7 @@ class ProfileView: UIView {
         addSubview(numStackView)
         addSubview(myInfoStackView)
         addSubview(middleBar2StackView)
+        addSubview(galleryCollectionView)
         
         NSLayoutConstraint.activate([
             userNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
@@ -289,7 +306,60 @@ class ProfileView: UIView {
             middleBar2StackView.topAnchor.constraint(equalTo: myInfoStackView.bottomAnchor, constant: 14),
             middleBar2StackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28),
             middleBar2StackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
+            
+            galleryCollectionView.topAnchor.constraint(equalTo: middleBar2StackView.bottomAnchor, constant: 10),
+            galleryCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            galleryCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            galleryCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 10)
         ])
+    }
+    
+    func configureCollectionView() {
+        galleryCollectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
+        // 컬렉션 뷰의 기능을 누가 사용하지는지 ? 👉 self 즉, 나 자신 클래스인 MainViewController
+        galleryCollectionView.delegate = self
+        //  컬렉션 뷰의 데이타 제공자는 ? 👉  self 즉, 나 자신 클래스인 MainViewController
+        galleryCollectionView.dataSource = self
     }
 }
 
+extension ProfileView: UICollectionViewDelegate {
+    
+}
+
+extension ProfileView: UICollectionViewDataSource {
+    // collection view의 item 갯수
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 300
+    }
+    
+    // Collection View의 cell 표시 방법
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.identifier, for: indexPath) as? GalleryCollectionViewCell else { return UICollectionViewCell()
+        }
+        cell.backgroundColor = .white
+        return cell
+    }
+}
+
+extension ProfileView: UICollectionViewDelegateFlowLayout {
+    // 위 아래 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    // 옆 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width / 3 - 1 ///  3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
+        print("collectionView width=\(collectionView.frame.width)")
+        print("cell하나당 width=\(width)")
+//        print("root view width = \(self.view.frame.width)")
+        
+        let size = CGSize(width: width, height: width)
+        return size
+    }
+}
