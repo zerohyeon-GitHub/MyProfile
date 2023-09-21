@@ -51,7 +51,7 @@ class ProfileView: UIView {
         imageView.layer.cornerRadius = 60
         imageView.clipsToBounds = true
         imageView.layer.borderWidth = 1
-        imageView.layer.borderColor = UIColor.gray.cgColor
+        imageView.layer.borderColor = UIColor.mainColor1?.cgColor
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -273,9 +273,68 @@ class ProfileView: UIView {
     }()
     
     // MARK: Nav gallery
+//    private lazy var segmentedControl: UISegmentedControl = {
+//        let segments = ["종료된 프로젝트", "진행중인 프로젝트"]
+//        let segmentedControl = UISegmentedControl(items: segments)
+//
+//        segmentedControl.selectedSegmentIndex = 1
+//        segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+//
+//        return segmentedControl
+//    }()
+    private let navGridImageView: UIImageView = {
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .light)
+        let image = UIImage(systemName: "squareshape.split.3x3", withConfiguration: imageConfig)
+        
+//        let imageView = UIImageView(image: UIImage(systemName: "squareshape.split.3x3"))
+        let imageView = UIImageView(image: image)
+        
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .mainColor1
+        
+        return imageView
+    }()
+    
+    private let navTableImageView: UIImageView = {
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .light)
+        let image = UIImage(systemName: "rectangle.grid.1x2", withConfiguration: imageConfig)
+        
+        let imageView = UIImageView(image: image)
+        
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .mainColor1
+        
+        return imageView
+    }()
+    
+    private let navSaveImageView: UIImageView = {
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .light)
+        let image = UIImage(systemName: "heart", withConfiguration: imageConfig)
+        
+        let imageView = UIImageView(image: image)
+        
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .mainColor1
+        
+        return imageView
+    }()
+    
+    private lazy var navStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [navGridImageView, navTableImageView, navSaveImageView])
+        stackView.spacing = 0
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        
+        stackView.layer.borderWidth = 0.5
+        stackView.layer.borderColor = UIColor.mainColor1?.cgColor
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
     
     // MARK: Collection View
-    let galleryCollectionView: UICollectionView = {
+    private lazy var galleryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
@@ -307,6 +366,7 @@ class ProfileView: UIView {
         addSubview(numStackView)
         addSubview(myInfoStackView)
         addSubview(middleBar2StackView)
+        addSubview(navStackView)
         addSubview(galleryCollectionView)
         
         NSLayoutConstraint.activate([
@@ -332,10 +392,15 @@ class ProfileView: UIView {
             middleBar2StackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             middleBar2StackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
-            galleryCollectionView.topAnchor.constraint(equalTo: middleBar2StackView.bottomAnchor, constant: 10),
+            navStackView.topAnchor.constraint(equalTo: middleBar2StackView.bottomAnchor, constant: 10),
+            navStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -1),
+            navStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 1),
+            navStackView.heightAnchor.constraint(equalToConstant: 40),
+            
+            galleryCollectionView.topAnchor.constraint(equalTo: navStackView.bottomAnchor, constant: 0),
             galleryCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             galleryCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            galleryCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 10)
+            galleryCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)
         ])
     }
     
@@ -381,8 +446,8 @@ extension ProfileView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width / 3 - 1 ///  3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
-        print("collectionView width=\(collectionView.frame.width)")
-        print("cell하나당 width=\(width)")
+//        print("cocell하나당llectionView width=\(collectionView.frame.width)")
+//        print(" width=\(width)")
 //        print("root view width = \(self.view.frame.width)")
         
         let size = CGSize(width: width, height: width)

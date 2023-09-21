@@ -17,9 +17,55 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let mainViewController = ProfileViewController()
+//        let mainViewController = ProfileViewController()
+//
+//        window.rootViewController = mainViewController
+//        self.window = window
+//        window.makeKeyAndVisible()
         
-        window.rootViewController = mainViewController
+        // 뷰 컨트롤러 생성
+        let homeVC = HomeViewController()
+        let shortsVC = ShortsViewController()
+        let profileVC = ProfileViewController()
+        
+        // 각 tab bar의 viewcontroller 설정
+        let homeTitle = "Home"
+        let homeIcon = UIImage.init(systemName: "house")
+        homeVC.tabBarItem = UITabBarItem(title: homeTitle, image: homeIcon, tag: 0)
+        let shortsTitle = "Shorts"
+        let shortsIcon = UIImage.init(systemName: "video")
+        shortsVC.tabBarItem = UITabBarItem(title: shortsTitle, image: shortsIcon, tag: 1)
+        let profileTitle = "Profile"
+        let profileIcon = UIImage.init(systemName: "person")
+        profileVC.tabBarItem = UITabBarItem(title: profileTitle, image: profileIcon, tag: 2)
+
+//        // 위에 타이틀 text를 항상 크게 보이게 설정
+//        homeVC.navigationItem.largeTitleDisplayMode = .always
+//        shortsVC.navigationItem.largeTitleDisplayMode = .always
+//        profileVC.navigationItem.largeTitleDisplayMode = .always
+        
+        // 탭 바 컨트롤러 생성
+        let tabBarController = TabBarViewController()
+        tabBarController.viewControllers = [homeVC, shortsVC, profileVC]
+        
+        tabBarController.selectedIndex = 2 // 시작 페이지 설정
+        
+        tabBarController.tabBar.tintColor = .mainColor1
+        
+//        // navigationController의 root view 설정
+//        let navigationHome = UINavigationController(rootViewController: homeVC)
+//        let navigationShorts = UINavigationController(rootViewController: shortsVC)
+//        let navigationProfile = UINavigationController(rootViewController: profileVC)
+//
+//        navigationHome.navigationBar.prefersLargeTitles = true
+//        navigationShorts.navigationBar.prefersLargeTitles = true
+//        navigationProfile.navigationBar.prefersLargeTitles = true
+//
+//        setViewControllers([navigationHome, navigationShorts, navigationProfile], animated: false)
+        
+        window.rootViewController = tabBarController
+        
+        // 윈도우를 표시
         self.window = window
         window.makeKeyAndVisible()
     }
