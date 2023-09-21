@@ -21,8 +21,9 @@
 		EB6923C12ABBCC130027143D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C02ABBCC130027143D /* HomeViewController.swift */; };
 		EB6923C32ABBCC2B0027143D /* ShortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C22ABBCC2B0027143D /* ShortsViewController.swift */; };
 		EB6923C52ABBCC3B0027143D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C42ABBCC3B0027143D /* AddViewController.swift */; };
-		EB6923C72ABC1B890027143D /* MainViewControlleer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C62ABC1B890027143D /* MainViewControlleer.swift */; };
+		EB6923C72ABC1B890027143D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C62ABC1B890027143D /* MainViewController.swift */; };
 		EB6923C92ABC1B950027143D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C82ABC1B950027143D /* MainView.swift */; };
+		EB6923CB2ABC40C30027143D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923CA2ABC40C30027143D /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +43,9 @@
 		EB6923C02ABBCC130027143D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB6923C22ABBCC2B0027143D /* ShortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsViewController.swift; sourceTree = "<group>"; };
 		EB6923C42ABBCC3B0027143D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		EB6923C62ABC1B890027143D /* MainViewControlleer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControlleer.swift; sourceTree = "<group>"; };
+		EB6923C62ABC1B890027143D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB6923C82ABC1B950027143D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EB6923CA2ABC40C30027143D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6923BC2ABB15F60027143D /* Color.swift */,
+				EB6923CA2ABC40C30027143D /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,7 +126,7 @@
 				EB6923C02ABBCC130027143D /* HomeViewController.swift */,
 				EB6923C22ABBCC2B0027143D /* ShortsViewController.swift */,
 				EB6923C42ABBCC3B0027143D /* AddViewController.swift */,
-				EB6923C62ABC1B890027143D /* MainViewControlleer.swift */,
+				EB6923C62ABC1B890027143D /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -222,12 +225,13 @@
 				EB6923A12AB926900027143D /* MyProfile.xcdatamodeld in Sources */,
 				EB6923B22AB927160027143D /* ProfileView.swift in Sources */,
 				EB6923BF2ABBCB970027143D /* TabBarViewController.swift in Sources */,
-				EB6923C72ABC1B890027143D /* MainViewControlleer.swift in Sources */,
+				EB6923C72ABC1B890027143D /* MainViewController.swift in Sources */,
 				EB6923C12ABBCC130027143D /* HomeViewController.swift in Sources */,
 				EB6923C32ABBCC2B0027143D /* ShortsViewController.swift in Sources */,
 				EB6923972AB9268F0027143D /* AppDelegate.swift in Sources */,
 				EB6923BD2ABB15F60027143D /* Color.swift in Sources */,
 				EB6923BA2ABABAF40027143D /* GalleryCollectionViewCell.swift in Sources */,
+				EB6923CB2ABC40C30027143D /* Task.swift in Sources */,
 				EB6923992AB9268F0027143D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
