@@ -39,7 +39,6 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     private func setUI() {
         addSubview(galleryImageView)
-        galleryImageView.image = UIImage(systemName: "SpiderManGallery1")
     }
     
     private func setConstraint() {

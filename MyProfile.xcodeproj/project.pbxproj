@@ -23,7 +23,15 @@
 		EB6923C52ABBCC3B0027143D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C42ABBCC3B0027143D /* AddViewController.swift */; };
 		EB6923C72ABC1B890027143D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C62ABC1B890027143D /* MainViewController.swift */; };
 		EB6923C92ABC1B950027143D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923C82ABC1B950027143D /* MainView.swift */; };
-		EB6923CB2ABC40C30027143D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923CA2ABC40C30027143D /* Task.swift */; };
+		EB6923CB2ABC40C30027143D /* UserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923CA2ABC40C30027143D /* UserId.swift */; };
+		EB6923CE2ABC442B0027143D /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923CC2ABC442B0027143D /* Task+CoreDataClass.swift */; };
+		EB6923CF2ABC442B0027143D /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923CD2ABC442B0027143D /* Task+CoreDataProperties.swift */; };
+		EB6923D32ABC4D7F0027143D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D22ABC4D7F0027143D /* UserInfo.swift */; };
+		EB6923D62ABC532E0027143D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D52ABC532E0027143D /* UserInfoViewController.swift */; };
+		EB6923D82ABC533C0027143D /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D72ABC533C0027143D /* UserInfoView.swift */; };
+		EB6923DD2ABC583F0027143D /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923DC2ABC583F0027143D /* TextTableViewCell.swift */; };
+		EB6923DF2ABC68DC0027143D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923DE2ABC68DC0027143D /* DataManager.swift */; };
+		EB6923E12ABC69660027143D /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923E02ABC69660027143D /* UserInfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +53,15 @@
 		EB6923C42ABBCC3B0027143D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		EB6923C62ABC1B890027143D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB6923C82ABC1B950027143D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		EB6923CA2ABC40C30027143D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		EB6923CA2ABC40C30027143D /* UserId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserId.swift; sourceTree = "<group>"; };
+		EB6923CC2ABC442B0027143D /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EB6923CD2ABC442B0027143D /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EB6923D22ABC4D7F0027143D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		EB6923D52ABC532E0027143D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInfoViewController.swift; path = MyProfile/Controllers/UserInfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		EB6923D72ABC533C0027143D /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		EB6923DC2ABC583F0027143D /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		EB6923DE2ABC68DC0027143D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EB6923E02ABC69660027143D /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,8 @@
 		EB69238A2AB9268F0027143D = {
 			isa = PBXGroup;
 			children = (
+				EB6923CC2ABC442B0027143D /* Task+CoreDataClass.swift */,
+				EB6923CD2ABC442B0027143D /* Task+CoreDataProperties.swift */,
 				EB6923952AB9268F0027143D /* MyProfile */,
 				EB6923942AB9268F0027143D /* Products */,
 			);
@@ -104,6 +122,7 @@
 			children = (
 				EB6923B12AB927160027143D /* ProfileView.swift */,
 				EB6923C82ABC1B950027143D /* MainView.swift */,
+				EB6923D72ABC533C0027143D /* UserInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,7 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				EB6923BC2ABB15F60027143D /* Color.swift */,
-				EB6923CA2ABC40C30027143D /* Task.swift */,
+				EB6923CA2ABC40C30027143D /* UserId.swift */,
+				EB6923D22ABC4D7F0027143D /* UserInfo.swift */,
+				EB6923DE2ABC68DC0027143D /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,12 +141,8 @@
 		EB6923B32AB939640027143D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EB6923BB2ABB02110027143D /* Cell */,
-				EB6923B42AB939880027143D /* ProfileViewController.swift */,
-				EB6923BE2ABBCB970027143D /* TabBarViewController.swift */,
-				EB6923C02ABBCC130027143D /* HomeViewController.swift */,
-				EB6923C22ABBCC2B0027143D /* ShortsViewController.swift */,
-				EB6923C42ABBCC3B0027143D /* AddViewController.swift */,
+				EB6923D42ABC53160027143D /* UserInfoViewController */,
+				EB6923D12ABC4C2C0027143D /* TabBarViewController */,
 				EB6923C62ABC1B890027143D /* MainViewController.swift */,
 			);
 			path = Controllers;
@@ -144,6 +161,45 @@
 			isa = PBXGroup;
 			children = (
 				EB6923B92ABABAF40027143D /* GalleryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EB6923D02ABC48F70027143D /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB6923BB2ABB02110027143D /* Cell */,
+				EB6923B42AB939880027143D /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		EB6923D12ABC4C2C0027143D /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB6923BE2ABBCB970027143D /* TabBarViewController.swift */,
+				EB6923C02ABBCC130027143D /* HomeViewController.swift */,
+				EB6923C22ABBCC2B0027143D /* ShortsViewController.swift */,
+				EB6923C42ABBCC3B0027143D /* AddViewController.swift */,
+				EB6923D02ABC48F70027143D /* ProfileViewController */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		EB6923D42ABC53160027143D /* UserInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB6923DB2ABC58050027143D /* Cell */,
+				EB6923D52ABC532E0027143D /* UserInfoViewController.swift */,
+				EB6923E02ABC69660027143D /* UserInfoViewModel.swift */,
+			);
+			path = UserInfoViewController;
+			sourceTree = "<group>";
+		};
+		EB6923DB2ABC58050027143D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB6923DC2ABC583F0027143D /* TextTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -220,18 +276,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB6923B52AB939880027143D /* ProfileViewController.swift in Sources */,
+				EB6923CE2ABC442B0027143D /* Task+CoreDataClass.swift in Sources */,
 				EB6923C92ABC1B950027143D /* MainView.swift in Sources */,
 				EB6923C52ABBCC3B0027143D /* AddViewController.swift in Sources */,
 				EB6923A12AB926900027143D /* MyProfile.xcdatamodeld in Sources */,
+				EB6923E12ABC69660027143D /* UserInfoViewModel.swift in Sources */,
+				EB6923D32ABC4D7F0027143D /* UserInfo.swift in Sources */,
 				EB6923B22AB927160027143D /* ProfileView.swift in Sources */,
+				EB6923CF2ABC442B0027143D /* Task+CoreDataProperties.swift in Sources */,
 				EB6923BF2ABBCB970027143D /* TabBarViewController.swift in Sources */,
 				EB6923C72ABC1B890027143D /* MainViewController.swift in Sources */,
+				EB6923DF2ABC68DC0027143D /* DataManager.swift in Sources */,
 				EB6923C12ABBCC130027143D /* HomeViewController.swift in Sources */,
 				EB6923C32ABBCC2B0027143D /* ShortsViewController.swift in Sources */,
 				EB6923972AB9268F0027143D /* AppDelegate.swift in Sources */,
+				EB6923D62ABC532E0027143D /* UserInfoViewController.swift in Sources */,
+				EB6923DD2ABC583F0027143D /* TextTableViewCell.swift in Sources */,
 				EB6923BD2ABB15F60027143D /* Color.swift in Sources */,
 				EB6923BA2ABABAF40027143D /* GalleryCollectionViewCell.swift in Sources */,
-				EB6923CB2ABC40C30027143D /* Task.swift in Sources */,
+				EB6923CB2ABC40C30027143D /* UserId.swift in Sources */,
+				EB6923D82ABC533C0027143D /* UserInfoView.swift in Sources */,
 				EB6923992AB9268F0027143D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -247,9 +247,9 @@ class ProfileView: UIView {
         
         button.backgroundColor = .subColor2
         // 테두리 스타일 설정
-        button.layer.borderWidth = 1.0 // 테두리 두께
-        button.layer.borderColor = UIColor.mainColor1?.cgColor // 테두리 색상
-        button.layer.cornerRadius = 6.0 // 테두리의 모서리 둥글게 처리 (원하는 값으로 설정)
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor.mainColor1?.cgColor
+        button.layer.cornerRadius = 6.0
         
         button.widthAnchor.constraint(equalToConstant: 30).isActive = true
         button.heightAnchor.constraint(equalToConstant: 30).isActive = true

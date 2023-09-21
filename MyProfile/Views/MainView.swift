@@ -36,7 +36,7 @@ class MainView: UIView {
         return button
     }()
     
-    private let coreDataPageButton: UIButton = {
+    let coreDataPageButton: UIButton = {
         let button = UIButton(type: .custom)
         
         button.backgroundColor = .subColor2

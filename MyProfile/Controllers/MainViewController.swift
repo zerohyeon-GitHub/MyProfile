@@ -16,7 +16,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         let mainView = MainView()
+        // uipage button addTarget 설정
         mainView.uiPageButton.addTarget(self, action: #selector(tapUIPageButton), for: .touchUpInside)
+        // uipage button addTarget 설정
+        mainView.coreDataPageButton.addTarget(self, action: #selector(tapCoreDataPageButton), for: .touchUpInside)
         
         view.backgroundColor = .white
         
@@ -34,6 +37,15 @@ class MainViewController: UIViewController {
     // MARK: - Helpers
     @objc func tapUIPageButton() {
         setTabBarView()
+    }
+    
+    @objc func tapCoreDataPageButton() {
+        let userInfoViewController = UserInfoViewController()
+        
+        // 새로운 뷰 컨트롤러를 모달로 표시
+        userInfoViewController.modalPresentationStyle = .fullScreen
+        userInfoViewController.modalTransitionStyle = .crossDissolve
+        present(userInfoViewController, animated: true)
     }
     
     func setTabBarView() {
