@@ -29,7 +29,7 @@
     * 각각의 화면으로 이동하는 화면입니다.
     * 'MainViewController'과 'MainView'로 파일을 각각 나누었습니다.
     * present를 사용하여 화면을 이동합니다.
-    * <center><img src="[/img/myImg.png](https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/65aa9c69-dd6b-4775-981f-3cb6fad1e0fc)" width="300" height="300"></center>
+    * <center><img src="(https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/65aa9c69-dd6b-4775-981f-3cb6fad1e0fc)" width="300" height="300"></center>
     * ![Simulator Screenshot - iPhone 14 Pro - 2023-09-22 at 12 33 25](https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/65aa9c69-dd6b-4775-981f-3cb6fad1e0fc)
 * 		UI 화면
     * Tabar를 이용하여 'Home', 'Shorts', 'Profile' ViewController을 각각 생성하였습니다.
