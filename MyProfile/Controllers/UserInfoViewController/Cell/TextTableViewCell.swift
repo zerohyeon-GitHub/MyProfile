@@ -51,6 +51,8 @@ class TextTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUI()
         setConstraint()
+        
+        titleTextField.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -58,7 +60,7 @@ class TextTableViewCell: UITableViewCell {
         setUI()
         setConstraint()
     }
-    
+       
     private func setUI() {
         addSubview(titleStackView)
     }
@@ -77,4 +79,10 @@ class TextTableViewCell: UITableViewCell {
         titleTextField.text = detail
     }
 
+}
+
+extension TextTableViewCell: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
 }

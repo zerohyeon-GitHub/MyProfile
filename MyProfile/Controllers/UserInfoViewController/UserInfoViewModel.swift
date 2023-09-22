@@ -6,19 +6,36 @@
 //
 
 import Foundation
+import CoreData
 
 class UserInfoViewModel {
-    private var userInfo: UserInfo
+    private var dataManager: DataManager
     
-    init(userInfo: UserInfo) {
-        self.userInfo = userInfo
+    init(dataManager: DataManager) {
+        self.dataManager = dataManager
+    }
+}
+
+extension UserInfoViewModel {
+    func saveData(name: String, age: Int){
+        print("saveData] name:\(name), age:\(age)")
+        // name 확인
+        // age 확인
+        
+        let data = UserInfo(name: name, age: age)
+        
+        self.dataManager.insertUserCoreData(userInfo: data)
     }
     
-    var name: String {
-        return userInfo.name
+    func fetchData(){
+        print("fetchData")
+        let coreData = User.fetchRequest()
+        self.dataManager.fetchCoreData(request: coreData)
     }
     
-    var age: Int {
-        return userInfo.age
+    func countData() -> Int {
+        print("countData")
+        let coreData = User.fetchRequest()
+        return self.dataManager.countCoreData(request: coreData) ?? 0
     }
 }

@@ -36,6 +36,22 @@ class MainView: UIView {
         return button
     }()
     
+    let mvvmPageButton: UIButton = {
+        let button = UIButton(type: .custom)
+        
+        button.backgroundColor = .subColor2
+        
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor.mainColor1?.cgColor
+        button.layer.cornerRadius = 6.0
+        
+        button.setTitle("MVVM 화면으로 이동", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.setTitleColor(.mainColor1, for: .normal)
+        
+        return button
+    }()
+    
     let coreDataPageButton: UIButton = {
         let button = UIButton(type: .custom)
         
@@ -53,7 +69,7 @@ class MainView: UIView {
     }()
     
     private lazy var mainButtonStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [uiPageButton, coreDataPageButton])
+        let stackView = UIStackView(arrangedSubviews: [uiPageButton, mvvmPageButton, coreDataPageButton])
         stackView.spacing = 20
         stackView.axis = .vertical
         stackView.distribution = .fillEqually

@@ -27,11 +27,16 @@
 		EB6923CE2ABC442B0027143D /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923CC2ABC442B0027143D /* Task+CoreDataClass.swift */; };
 		EB6923CF2ABC442B0027143D /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923CD2ABC442B0027143D /* Task+CoreDataProperties.swift */; };
 		EB6923D32ABC4D7F0027143D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D22ABC4D7F0027143D /* UserInfo.swift */; };
-		EB6923D62ABC532E0027143D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D52ABC532E0027143D /* UserInfoViewController.swift */; };
-		EB6923D82ABC533C0027143D /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D72ABC533C0027143D /* UserInfoView.swift */; };
+		EB6923D62ABC532E0027143D /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D52ABC532E0027143D /* MVVMViewController.swift */; };
+		EB6923D82ABC533C0027143D /* MVVMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923D72ABC533C0027143D /* MVVMView.swift */; };
 		EB6923DD2ABC583F0027143D /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923DC2ABC583F0027143D /* TextTableViewCell.swift */; };
 		EB6923DF2ABC68DC0027143D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923DE2ABC68DC0027143D /* DataManager.swift */; };
-		EB6923E12ABC69660027143D /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923E02ABC69660027143D /* UserInfoViewModel.swift */; };
+		EB6923E12ABC69660027143D /* MVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923E02ABC69660027143D /* MVVMViewModel.swift */; };
+		EB6923E52ABC7FC30027143D /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923E42ABC7FC30027143D /* UserInfoView.swift */; };
+		EB6923E72ABC80400027143D /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923E62ABC80400027143D /* UserInfoViewController.swift */; };
+		EB6923E92ABC80B00027143D /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923E82ABC80B00027143D /* UserInfoViewModel.swift */; };
+		EB6923F62ABD0CE70027143D /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923F42ABD0CE70027143D /* User+CoreDataClass.swift */; };
+		EB6923F72ABD0CE70027143D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6923F52ABD0CE70027143D /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,11 +62,16 @@
 		EB6923CC2ABC442B0027143D /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EB6923CD2ABC442B0027143D /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EB6923D22ABC4D7F0027143D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		EB6923D52ABC532E0027143D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInfoViewController.swift; path = MyProfile/Controllers/UserInfoViewController.swift; sourceTree = SOURCE_ROOT; };
-		EB6923D72ABC533C0027143D /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		EB6923D52ABC532E0027143D /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MVVMViewController.swift; path = MyProfile/Controllers/MVVMViewController.swift; sourceTree = SOURCE_ROOT; };
+		EB6923D72ABC533C0027143D /* MVVMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMView.swift; sourceTree = "<group>"; };
 		EB6923DC2ABC583F0027143D /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		EB6923DE2ABC68DC0027143D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		EB6923E02ABC69660027143D /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
+		EB6923E02ABC69660027143D /* MVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModel.swift; sourceTree = "<group>"; };
+		EB6923E42ABC7FC30027143D /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		EB6923E62ABC80400027143D /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		EB6923E82ABC80B00027143D /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
+		EB6923F42ABD0CE70027143D /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EB6923F52ABD0CE70027143D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,8 @@
 		EB69238A2AB9268F0027143D = {
 			isa = PBXGroup;
 			children = (
+				EB6923F42ABD0CE70027143D /* User+CoreDataClass.swift */,
+				EB6923F52ABD0CE70027143D /* User+CoreDataProperties.swift */,
 				EB6923CC2ABC442B0027143D /* Task+CoreDataClass.swift */,
 				EB6923CD2ABC442B0027143D /* Task+CoreDataProperties.swift */,
 				EB6923952AB9268F0027143D /* MyProfile */,
@@ -122,7 +134,8 @@
 			children = (
 				EB6923B12AB927160027143D /* ProfileView.swift */,
 				EB6923C82ABC1B950027143D /* MainView.swift */,
-				EB6923D72ABC533C0027143D /* UserInfoView.swift */,
+				EB6923D72ABC533C0027143D /* MVVMView.swift */,
+				EB6923E42ABC7FC30027143D /* UserInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,8 +203,10 @@
 			isa = PBXGroup;
 			children = (
 				EB6923DB2ABC58050027143D /* Cell */,
-				EB6923D52ABC532E0027143D /* UserInfoViewController.swift */,
-				EB6923E02ABC69660027143D /* UserInfoViewModel.swift */,
+				EB6923D52ABC532E0027143D /* MVVMViewController.swift */,
+				EB6923E02ABC69660027143D /* MVVMViewModel.swift */,
+				EB6923E62ABC80400027143D /* UserInfoViewController.swift */,
+				EB6923E82ABC80B00027143D /* UserInfoViewModel.swift */,
 			);
 			path = UserInfoViewController;
 			sourceTree = "<group>";
@@ -275,27 +290,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6923E52ABC7FC30027143D /* UserInfoView.swift in Sources */,
+				EB6923E72ABC80400027143D /* UserInfoViewController.swift in Sources */,
 				EB6923B52AB939880027143D /* ProfileViewController.swift in Sources */,
 				EB6923CE2ABC442B0027143D /* Task+CoreDataClass.swift in Sources */,
 				EB6923C92ABC1B950027143D /* MainView.swift in Sources */,
 				EB6923C52ABBCC3B0027143D /* AddViewController.swift in Sources */,
 				EB6923A12AB926900027143D /* MyProfile.xcdatamodeld in Sources */,
-				EB6923E12ABC69660027143D /* UserInfoViewModel.swift in Sources */,
+				EB6923E12ABC69660027143D /* MVVMViewModel.swift in Sources */,
 				EB6923D32ABC4D7F0027143D /* UserInfo.swift in Sources */,
 				EB6923B22AB927160027143D /* ProfileView.swift in Sources */,
 				EB6923CF2ABC442B0027143D /* Task+CoreDataProperties.swift in Sources */,
 				EB6923BF2ABBCB970027143D /* TabBarViewController.swift in Sources */,
+				EB6923E92ABC80B00027143D /* UserInfoViewModel.swift in Sources */,
 				EB6923C72ABC1B890027143D /* MainViewController.swift in Sources */,
 				EB6923DF2ABC68DC0027143D /* DataManager.swift in Sources */,
 				EB6923C12ABBCC130027143D /* HomeViewController.swift in Sources */,
+				EB6923F62ABD0CE70027143D /* User+CoreDataClass.swift in Sources */,
+				EB6923F72ABD0CE70027143D /* User+CoreDataProperties.swift in Sources */,
 				EB6923C32ABBCC2B0027143D /* ShortsViewController.swift in Sources */,
 				EB6923972AB9268F0027143D /* AppDelegate.swift in Sources */,
-				EB6923D62ABC532E0027143D /* UserInfoViewController.swift in Sources */,
+				EB6923D62ABC532E0027143D /* MVVMViewController.swift in Sources */,
 				EB6923DD2ABC583F0027143D /* TextTableViewCell.swift in Sources */,
 				EB6923BD2ABB15F60027143D /* Color.swift in Sources */,
 				EB6923BA2ABABAF40027143D /* GalleryCollectionViewCell.swift in Sources */,
 				EB6923CB2ABC40C30027143D /* UserId.swift in Sources */,
-				EB6923D82ABC533C0027143D /* UserInfoView.swift in Sources */,
+				EB6923D82ABC533C0027143D /* MVVMView.swift in Sources */,
 				EB6923992AB9268F0027143D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

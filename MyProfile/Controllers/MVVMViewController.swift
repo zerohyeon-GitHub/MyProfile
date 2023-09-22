@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-class UserInfoViewController: UIViewController {
+class MVVMViewController: UIViewController {
     
     // MARK: - Properties
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let userInfoView = UserInfoView()
+        let userInfoView = MVVMView()
         
         view.backgroundColor = .white
         
