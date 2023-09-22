@@ -29,7 +29,7 @@
     * 각각의 화면으로 이동하는 화면입니다.
     * 'MainViewController'과 'MainView'로 파일을 각각 나누었습니다.
     * present를 사용하여 화면을 이동합니다.
-    * <center><img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/65aa9c69-dd6b-4775-981f-3cb6fad1e0fc.png" width="300"></center>
+    * <img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/65aa9c69-dd6b-4775-981f-3cb6fad1e0fc.png" width="300">
 * 		UI 화면
     * Tabar를 이용하여 'Home', 'Shorts', 'Profile' ViewController을 각각 생성하였습니다.
     * 시작 화면은 'Profile'로 임의로 설정하였습니다.
@@ -38,14 +38,14 @@
     * 추가적으로 진행을 해볼 기능
         1. UISegmentedControl을 사용하여 CollectionView와 TableView를 각각 슬라이딩을 하여 표시
         2. 다른 탭바의 화면도 추가적으로 구현!
-    * <center><img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/c8bd42b7-c13f-4419-a215-096f3c76f2b9.png" width="300"></center>
+    * <img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/c8bd42b7-c13f-4419-a215-096f3c76f2b9.png" width="300">
 * 		MVVM 화면
     * MVVM을 이용하여 이름과 나이를 표시하는 화면입니다.
     * Model: 'UserInfo'
     * View: 'MVVMView', 'MVVMViewController'
     * ViewModel: 'MVVMViewModl'
     * Model에서 생성한 UserInfo 구조체를 ViewModel로 가져와서 View에서 표시해주는 것으로 구현하였습니다.
-    * * <center><img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/68d419b4-4d5c-4f37-998d-297fd3a9fcb4.png" width="300"></center>
+    * <img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/68d419b4-4d5c-4f37-998d-297fd3a9fcb4.png" width="300">
 * 		CoreData 화면
     * Core Data에 데이터를 저장하고, 그 데이터를 표시하는 화면입니다.
     * Model: 'UserInfo', 'DataManager'
@@ -56,9 +56,9 @@
     * 스스로의 피드백
         1. Model과 ViewModel간의 개념이 불확실하게 잡힌 것 같습니다.
         2. CoreData 중 relationship에 대한 부분은 더 파악이 필요하다고 생각됩니다.
-    * <center><img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/416bfd23-4e40-470e-a1d7-61086c17f9b8.png" width="300"></center>
-    * <center><img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/02fe1904-04c9-461f-a4df-e35fcaf5197b.png" width="300"></center>
-    * <center><img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/2b89467c-aa71-426a-8b55-8dcf43414e83.png" width="300"></center>
+    * <img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/416bfd23-4e40-470e-a1d7-61086c17f9b8.png" width="300">
+    * <img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/02fe1904-04c9-461f-a4df-e35fcaf5197b.png" width="300">
+    * <img src="https://github.com/zerohyeon-GitHub/MyProfile/assets/75235447/2b89467c-aa71-426a-8b55-8dcf43414e83.png" width="300">
   <br><br>
   - - -
   
